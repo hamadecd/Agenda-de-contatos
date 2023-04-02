@@ -30,7 +30,6 @@ export const CardContact = (contato) => {
         <a href="/#contacts">Deletar</a>
         <a href="/?id-contact=${contato.id}#contact-details">Visualizar</a>
     `
-    console.log(contato)
     /* 
     Quando você retorna cardContact.cloneNode(true), você está criando uma cópia do 
     elemento cardContact com todos os seus filhos e atributos. Isso significa que a 

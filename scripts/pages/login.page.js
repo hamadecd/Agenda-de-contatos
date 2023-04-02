@@ -32,11 +32,6 @@ export const Login = () => {
         <label for="senha">Senha</label>
         <input type="password" name="senha" required>
 
-        <fieldset>
-            <input type="checkbox" name="salvar" id="salvar" value="salvar">
-            <label for="salvar">Salvar login?</label>
-        </fieldset>
-
         <button type="submit">Entrar</button>
         <p>Não tem conta?<a href="/#signup"> Clique aqui</a></p>
     `
