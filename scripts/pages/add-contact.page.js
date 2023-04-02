@@ -47,12 +47,14 @@ const eventos = () => {
         delete dadosDoFormulario['pais']
 
         postContact(dadosDoFormulario)
-            .then(({ data }) => {
-                
-                window.alert(`usuário ${data.nome} criado com sucesso!`)
-                window.open('/#contacts', '_self')
+            .then(( ) => {            
+                window.location.href = '/#contacts'
+                setInterval(() => {
+                    window.location.reload()
+                }, 300)
             })
             .catch((erro) => {
+                window.alert(`Não foi possível adicionar o usuário ${data.nome}`)
                 console.error(erro)
             })
     })

@@ -2,8 +2,7 @@ const urlBase = 'http://localhost:5000/v1/'
 
 const headers = new Headers()
 headers.append('content-type', 'application/json')
-headers.append('Authorization', `${sessionStorage.getItem('@token')}`)
-
+//headers.append('Authorization', `${sessionStorage.getItem('@token')}`)
 
 export const postUser = async (dados) => {
     const url = urlBase + 'user'
@@ -19,7 +18,7 @@ export const postUser = async (dados) => {
 
 export const patchUser = async (dados) => {
 
-    //headers.append('Authorization', `${sessionStorage.getItem('@token')}`)
+    headers.set('Authorization', `${sessionStorage.getItem('@token')}`)
 
     const resposta = await fetch(urlBase + 'user', {
         headers,
@@ -31,6 +30,8 @@ export const patchUser = async (dados) => {
 }
 
 export const deleteUser = async (usuario) => {
+    headers.set('Authorization', `${sessionStorage.getItem('@token')}`)
+
     const idUsuario = usuario.id
 
     const resposta = await fetch(urlBase + 'user', {

@@ -1,11 +1,15 @@
 @import url(./styles/pages/login.page.css);
+@import url(./styles/pages/signup.page.css);
+@import url(./styles/pages/contact.page.css);
 @import url(./styles/components/header.component.css);
+@import url(./styles/pages/card-contact.component.css);
+@import url(./styles/pages/add-contact.css);
 
 body {
     margin: 0;
     padding: 0 16px;
     background-color: #202020;
-    color: white;
+    color: aliceblue;
 }
 
 * {
@@ -14,10 +18,21 @@ body {
 
 label {
     font-weight: 500;
-    color: blueviolet;
+    color: rgb(168, 205, 247);    
 }
 
-input {
+input:not(input[type='checkbox']):not(input[type='radio']), button {
     min-height: 40px;
     padding: 5px 10px;
+}
+
+input[type='radio'], input[type='radio'] {
+    display: inline;
+    width: auto;
+}
+
+#cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

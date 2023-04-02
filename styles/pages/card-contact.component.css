@@ -1,0 +1,34 @@
+.c-card-contact {
+    border: solid 2px white;
+    margin-bottom: 5px;
+}
+
+.c-card-contact p {
+    margin-left: 10px;
+    display: flex;
+}
+
+#deletar {
+    position: absolute;
+    right: 5%;
+}
+
+#detalhes {
+    position: absolute;
+    right: 15%;
+}
+
+#section {
+    background-color: #3f4e69;
+    height: 44px;
+    border-top: 1px solid #5f6e82;
+    padding: 10px;
+}
+
+#div-card-contact, a {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;    
+}
+
+

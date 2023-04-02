@@ -7,6 +7,8 @@ const eventos = () => {
     login.addEventListener('submit', (e) => {
         e.preventDefault()
 
+        const mensagemSpan = login.querySelector('span')
+
         const fd = new FormData(login)
         const dados = Object.fromEntries(fd)
 
@@ -18,6 +20,7 @@ const eventos = () => {
                 window.location.href = '/#contacts'
             })
             .catch((erro) => {
+                mensagemSpan.innerText = 'Verifique suas informações'
                 console.log(erro)
             })
     })
@@ -32,13 +35,10 @@ export const Login = () => {
         <label for="senha">Senha</label>
         <input type="password" name="senha" required>
 
-        <fieldset>
-            <input type="checkbox" name="salvar" id="salvar" value="salvar">
-            <label for="salvar">Salvar login?</label>
-        </fieldset>
-
         <button type="submit">Entrar</button>
-        <p>Não tem conta?<a href="/#signup"> Clique aqui</a></p>
+        <span></span>
+
+        <p>Não tem conta?<a href="/#signup">Clique aqui</a></p>
     `
     eventos()
     return login

@@ -25,12 +25,11 @@ const eventos = (contato, clonedCardContact) => {
 
 export const CardContact = (contato) => {
     cardContact.innerHTML = `
-        <p>${contato.nome}</p>
-
-        <a href="/#contacts">Deletar</a>
-        <a href="/?id-contact=${contato.id}#contact-details">Visualizar</a>
+        <p>${contato.nome}
+            <a id="deletar" href="/#contacts">Deletar</a>
+            <a id="detalhes" href="/?id-contact=${contato.id}#contact-details">Visualizar</a>
+        </p>
     `
-    console.log(contato)
     /* 
     Quando você retorna cardContact.cloneNode(true), você está criando uma cópia do 
     elemento cardContact com todos os seus filhos e atributos. Isso significa que a 

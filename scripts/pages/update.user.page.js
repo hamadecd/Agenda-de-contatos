@@ -1,10 +1,9 @@
 import { deleteUser, patchUser } from "../services/user.service.js"
+import { Header } from "../components/header.component.js"
 
+const root = document.querySelector('#root')
 const update = document.createElement('form')
 update.setAttribute('id', 'p-update')
-
-//const deleteUser = document.createElement('div')
-//deleteUser.setAttribute('id', 'div-delete')
 
 const eventos = () => {
 
@@ -21,6 +20,8 @@ const eventos = () => {
                 }
                 if (data.nome !== "") {
                     dados.nome = data.nome
+                    //const teste = sessionStorage.getItem('@user')
+                    //teste.nome = dados.nome
                 }
                 if (data.senha !== "") {
                     dados.senha = data.senha
@@ -28,10 +29,9 @@ const eventos = () => {
 
                 window.alert("Dados alterados com sucesso!")
                 window.location.href = "/#contacts"
-                window.location.reload()
-
             })
             .catch((erro) => {
+                window.alert('Nenhuma alteração feita')
                 console.log(erro)
             })
     })
@@ -57,9 +57,12 @@ const eventos = () => {
         }
 
     })
+
 }
 
 export const Update = () => {
+    root.append(Header())
+
     update.innerHTML = `
         <label for="email">E-mail</label>
         <input type="email" name="email">
@@ -72,7 +75,9 @@ export const Update = () => {
 
         <button type="submit">Salvar Alterações</button>
         <button type="button" id='btn-delete'>Excluir usuário</button>
-
+        <a href="/#contacts">
+            <button type="button" id="btn-voltar">Voltar</button>
+        </a>
     `
     eventos()
     return update
