@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 40px;
+}
+
+legend, a {
+    font-size: large;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#fieldset-telefones {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
