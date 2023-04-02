@@ -10,7 +10,7 @@ const ROUTER = {
     "#login": { component: Login, private: false},
     "#404": { component: NotFound, private: undefined},
     "#signup": {component: Signup, private: false},
-    "#update": {component: Update, private: false},
+    "#update": {component: Update, private: true},
     "#add-contact": { component: AddContact, private: true },
     "#contact-details": { component: ContactDetails, private: true },
     "#contacts": {component: Contacts, private: true}
