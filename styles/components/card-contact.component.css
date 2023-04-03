@@ -1,5 +1,5 @@
 .c-card-contact {
-    border: solid 2px white;
+    border: solid 2px blue;
     margin-bottom: 5px;
 }
 
@@ -35,5 +35,3 @@
     color: rgb(255, 255, 255);
     margin-left: 20px;    
 }
-
-

@@ -3,7 +3,7 @@ import { Header } from "../components/header.component.js"
 
 const root = document.querySelector('#root')
 const update = document.createElement('form')
-update.setAttribute('id', 'p-update')
+update.setAttribute('id', 'p-signup')
 
 const eventos = () => {
 
@@ -20,8 +20,6 @@ const eventos = () => {
                 }
                 if (data.nome !== "") {
                     dados.nome = data.nome
-                    //const teste = sessionStorage.getItem('@user')
-                    //teste.nome = dados.nome
                 }
                 if (data.senha !== "") {
                     dados.senha = data.senha
@@ -73,9 +71,9 @@ export const Update = () => {
         <label for="nome">Nome</label>
         <input type="text" name="nome">
 
-        <button type="submit">Salvar Alterações</button>
+        <button id="btn-salvar" type="submit">Salvar Alterações</button>
         <button type="button" id='btn-delete'>Excluir usuário</button>
-        <a href="/#contacts">
+        <a id="voltar" href="/#contacts">
             <button type="button" id="btn-voltar">Voltar</button>
         </a>
     `
