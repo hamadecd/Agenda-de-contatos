@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}

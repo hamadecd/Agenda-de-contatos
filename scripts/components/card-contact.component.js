@@ -4,9 +4,9 @@ const cardContact = document.createElement('div')
 cardContact.classList.add('c-card-contact')
 
 const eventos = (contato, clonedCardContact) => {
-    const [clonedAnchorDelete] = clonedCardContact.querySelectorAll('a')
+    const anchorDelete = clonedCardContact.querySelector('#deletar')
 
-    clonedAnchorDelete.addEventListener('click', (e) => {
+    anchorDelete.addEventListener('click', (e) => {
         e.preventDefault()
         const confirm = window.confirm(`Deseja deletar o contato ${contato.nome}?`)
             
@@ -21,12 +21,21 @@ const eventos = (contato, clonedCardContact) => {
                     })
             }
     })
+
+    const anchorAlterar = clonedCardContact.querySelector('#alterar')
+
+    anchorAlterar.addEventListener('click', (e) => {
+        window.location.href = '/#update-contact'
+        window.location.reload()
+    })
+
 }
 
 export const CardContact = (contato) => {
     cardContact.innerHTML = `
         <p>${contato.nome}
             <a id="deletar" href="/#contacts">Deletar</a>
+            <a id="alterar" href="/#contacts">Alterar</a>
             <a id="detalhes" href="/?id-contact=${contato.id}#contact-details">Visualizar</a>
         </p>
     `
