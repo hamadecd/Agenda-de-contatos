@@ -31,6 +31,22 @@
 }
 
    button {
-    background-color: rgb(114, 116, 116);
     font-size: large;
+   }
+
+   button#btn-salvar {
+        background-color: rgb(134, 233, 134);
+   }
+
+   button#btn-delete {
+        background-color: rgb(185, 51, 51);
+   }
+
+   button#btn-voltar {
+        background-color: rgb(196, 196, 48);
+   }
+
+   a#voltar {
+        margin-left: -1px;
+        text-decoration: none;
    }

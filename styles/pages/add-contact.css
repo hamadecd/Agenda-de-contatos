@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+form input,
+form select,
+form textarea,
+button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+legend {
+    font-size: 20px;
+}
+
+select {
+    height: 40px;
+    color: grey;
+}

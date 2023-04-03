@@ -3,7 +3,8 @@ import { Header } from "../components/header.component.js"
 
 const root = document.querySelector('#root')
 const update = document.createElement('form')
-update.setAttribute('id', 'p-update')
+// update.setAttribute('id', 'p-update')
+update.setAttribute('id', 'p-signup')
 
 const eventos = () => {
 
@@ -73,11 +74,9 @@ export const Update = () => {
         <label for="nome">Nome</label>
         <input type="text" name="nome">
 
-        <button type="submit">Salvar Alterações</button>
+        <button type="submit" id='btn-salvar'>Salvar Alterações</button>
         <button type="button" id='btn-delete'>Excluir usuário</button>
-        <a href="/#contacts">
-            <button type="button" id="btn-voltar">Voltar</button>
-        </a>
+        <a href="/#contacts" id="voltar"><button type="button" id="btn-voltar">Voltar</button></a>
     `
     eventos()
     return update
