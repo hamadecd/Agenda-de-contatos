@@ -4,8 +4,17 @@
 
 form input,
 form select,
-form textarea {
+form textarea, button {
     display: block;
     margin-bottom: 10px;
     width: 100%;
+}
+
+legend {
+    font-size: 20px;
+}
+
+select {
+    height: 40px;
+    color: grey;
 }
