@@ -16,27 +16,36 @@ const ROUTER = {
     "#contacts": {component: Contacts, private: true}
 }
 
+function isTokenExpired(token) {
+    if(!token) return true
+    const expiry = (JSON.parse(atob(token.split('.')[1]))).exp
+    return (Math.floor((new Date).getTime() / 1000)) >= expiry
+}
+
 function redirectPage() {
-
     const route = ROUTER[window.location.hash] || ROUTER['#404']
-
     const root = document.querySelector('#root')
 
-    if(route.private !== undefined) {
-        const ehPrivadoNaoLogado = route.private === true && !sessionStorage.getItem('@token')
-
-        if(ehPrivadoNaoLogado) {
-            window.location.href = '/#login'
-            return
-        }
+    const token = sessionStorage.getItem('@token')
+    const ehTokenExpirado = isTokenExpired(token)
+    const ehRotaPrivada = route.private === true
+    const ehRotaPublica = route.private === false
+    const ehRotaPublicaPrivada = route.private === undefined
     
-        const ehPublicoLogado = route.private === false && sessionStorage.getItem('@token')
-    
-        if(ehPublicoLogado) {
-            window.location.href = '/#contacts'
-            return
+    if(!ehRotaPublicaPrivada) {    
+            if(ehRotaPrivada && ehTokenExpirado) {
+                sessionStorage.removeItem('@token')
+                sessionStorage.removeItem('@user')
+                window.location.href = '/#login'
+                return
+            }
+            
+            if(ehRotaPublica && !ehTokenExpirado) {
+                window.location.href = '/#contacts'
+                window.location.reload()
+                return
+            }
         }
-    }
 
     root.innerHTML = null
     root.append(route.component())
