@@ -1,11 +1,15 @@
 .c-card-contact {
-    border: solid 2px white;
+    border: solid 2px blue;
     margin-bottom: 5px;
 }
 
 .c-card-contact p {
     margin-left: 10px;
     display: flex;
+}
+
+.c-card-contact :hover {
+    background-color: #5f6e82;
 }
 
 #deletar {

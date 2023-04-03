@@ -63,7 +63,8 @@ const eventos = () => {
 export const AddContact = () => {
     root.append(Header())
 
-    addContact.innerHTML = `
+    addContact.innerHTML = 
+    `
         <div id="cabecalho">
             <h1>Novo contato</h1>
             <a href="/#contacts">Voltar para contatos</a>
@@ -109,7 +110,7 @@ export const AddContact = () => {
             <input name="numero-3" placeholder="Insira o número aqui..." type="phone" />
         </fieldset>
 
-        <button>Cadastrar</button>
+        <button id="cadastrar">Cadastrar</button>
     `
     eventos()
     return addContact

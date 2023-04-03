@@ -2,23 +2,23 @@
     box-sizing: border-box;
 }
 
-textarea {
-    min-height: 40px;
+form input,
+form select,
+form textarea,
+button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-legend, a {
-    font-size: large;
+legend {
+    font-size: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-}
-
-#fieldset-telefones {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
+select {
+    height: 40px;
+    color: grey;
 }
