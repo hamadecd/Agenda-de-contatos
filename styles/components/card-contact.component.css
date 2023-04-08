@@ -8,6 +8,10 @@
     display: flex;
 }
 
+.c-card-contact :hover {
+    background-color: #5f6e82;
+}
+
 #deletar {
     position: absolute;
     right: 5%;
