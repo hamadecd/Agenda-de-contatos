@@ -20,6 +20,9 @@ const eventos = () => {
                 }
                 if (data.nome !== "") {
                     dados.nome = data.nome
+                    const atualiza = JSON.parse(sessionStorage.getItem('@user'))
+                    atualiza.nome = data.nome
+                    sessionStorage.setItem('@user', JSON.stringify(atualiza))
                 }
                 if (data.senha !== "") {
                     dados.senha = data.senha
@@ -30,7 +33,7 @@ const eventos = () => {
             })
             .catch((erro) => {
                 window.alert('Nenhuma alteração feita')
-                console.log(erro)
+                //console.log(erro)
             })
     })
 
