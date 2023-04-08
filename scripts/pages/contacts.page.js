@@ -28,7 +28,7 @@ export const Contacts = () => {
     contacts.innerHTML = `
         <div id="cabecalho">
             <h1>Contatos</h1>
-            <a href="/#add-contact">Adicionar contato</a>
+            <a href="/#add-contact" id='add-contact'>Adicionar contato</a>
         </div>
         <div id="contatos"></div>
     `

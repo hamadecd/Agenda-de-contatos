@@ -18,3 +18,7 @@ select {
     height: 40px;
     color: grey;
 }
+
+a {
+    font-size: 20px;
+}
